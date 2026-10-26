@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏡 MyFamily — Umirbek ota va Maxbuba ona Qozoq Oilasi</title>
+  <meta name="description" content="Ahil va mehmondo‘st qozoq oilamiz uchun yaratilgan zamonaviy oilaviy veb-sayt. Oila a'zolari: Umirbek ota, Maxbuba ona, Sanjarbek va Asqarbek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+</head>
+<body>
+
+  <!-- Background Ambient Glow Orbs -->
+  <div class="bg-ambient-orb orb-1"></div>
+  <div class="bg-ambient-orb orb-2"></div>
+  <div class="bg-ambient-orb orb-3"></div>
+
+  <!-- =========================================================================
+       1. Header & Navigation (Sayt Menyusi)
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#bosh-sahifa" class="site-logo">
+        <span class="logo-icon">🏡</span>
+        <span>MyFamily</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#bosh-sahifa" class="nav-link active">Bosh sahifa</a></li>
+          <li><a href="#oilamiz" class="nav-link">Oilamiz</a></li>
+          <li><a href="#fotoalbom" class="nav-link">Fotoalbom</a></li>
+          <li><a href="#xotiralar" class="nav-link">Xotiralar</a></li>
+          <li><a href="#kalendar" class="nav-link">Kalendar</a></li>
+          <li><a href="#kabinet" class="nav-link">Shaxsiy kabinet</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="btn-icon" id="themeToggleBtn" title="Mavzuni almashtirish (Tungi/Kunduzgi)" aria-label="Mavzuni almashtirish">
+          <span id="themeIcon">🌓</span>
+        </button>
+
+        <!-- Kabinetga o'tish tugmasi -->
+        <a href="#kabinet" class="btn-primary" id="headerAdminBtn">
+          <span>🔐</span>
+          <span>Kabinet</span>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn" aria-label="Menyu">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         1. Bosh Sahifa (Home)
+         ======================================================================= -->
+    <section class="hero-section section-padding" id="bosh-sahifa">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span>🇰🇿</span>
+              <span>Ahil va mehmondo‘st qozoq oilasi</span>
+            </div>
+            
+            <h1 class="hero-title font-serif">
+              Bizning baxtli <br>
+              <span class="gradient-text">Qozoq oilamiz sahifasi</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              <em>"Otan — otbasınan bastaladı."</em> Har bir oilaviy lahza — qalbimizdagi bebaho xazina. Umirbek ota, Maxbuba ona, Sanjarbek va Asqarbekning quvonchli kunlari, qozoq milliy an'analari, esda qolarli sayohatlari va samimiy xotiralari jamlangan maskan.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#oilamiz" class="btn-primary">
+                <span>👨‍👩‍👦‍👦</span>
+                <span>Oilamiz bilan tanishing</span>
+              </a>
+              <a href="#fotoalbom" class="btn-outline">
+                <span>📸</span>
+                <span>Fotoalbomni ko‘rish</span>
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-num" id="statMembersCount">4</span>
+                <span class="stat-label">Oila a'zosi</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num" id="statPhotosCount">150+</span>
+                <span class="stat-label">Esdalik suratlar</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num" id="statMemoriesCount">25+</span>
+                <span class="stat-label">Oltin xotiralar</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">∞</span>
+                <span class="stat-label">Cheksiz mehr</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Media Cover Showcase -->
+          <div class="hero-visual">
+            <div class="hero-image-wrapper">
+              <img src="assets/images/hero_family_cover.jpg" alt="Bizning baxtli oilamiz" id="heroCoverImg" loading="eager">
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-glass-card">
+              <div class="badge-icon">💖</div>
+              <div>
+                <div class="badge-text-title">Anarboyevlar qozoq xonadoni</div>
+                <div class="badge-text-sub">Otan otbasınan bastaladı • Mehr maskani</div>
+              </div>
+            </div>
+
+            <div class="floating-glass-top">
+              <span>🎉</span>
+              <span style="font-size: 0.85rem; font-weight: 700;">Birgalikda doimo baxtlimiz</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. Oilamiz (Our Family)
+         ======================================================================= -->
+    <section class="section-padding" id="oilamiz">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">👨‍👩‍👦‍👦 Bizning qadrdonlarimiz</span>
+          <h2 class="section-title font-serif">Oila a'zolarimiz</h2>
+          <p class="section-desc">
+            Dadam Umirbek, onam Maxbuba, akam Sanjarbek va men Asqarbek. Qozoq milliy qadriyatlari, o‘zaro ehtirom va cheksiz mehr bilan xonadonimiz fayzini yaratamiz.
+          </p>
+        </div>
+
+        <div class="family-grid" id="familyMembersGrid">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. Fotoalbom (Gallery)
+         ======================================================================= -->
+    <section class="section-padding" id="fotoalbom" style="background: var(--bg-secondary);">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">📸 Esdalik suratlar</span>
+          <h2 class="section-title font-serif">Oilaviy Fotoalbom</h2>
+          <p class="section-desc">
+            Sayohatlar, quvonchli bayramlar va kundalik iliq lahzalar muhrlangan fotosuratlar to‘plami.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="gallery-filters" id="galleryFilters">
+          <button class="filter-btn active" data-category="all">🌟 Barchasi</button>
+          <button class="filter-btn" data-category="family">👨‍👩‍👦‍👦 Oilaviy rasmlar</button>
+          <button class="filter-btn" data-category="celebration">🎂 Bayram va tug‘ilgan kunlar</button>
+          <button class="filter-btn" data-category="travel">✈️ Sayohatlar</button>
+          <button class="filter-btn" data-category="daily">🏡 Kundalik lahzalar</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. Xotiralar (Memories)
+         ======================================================================= -->
+    <section class="section-padding" id="xotiralar">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">📖 Qalb daftari</span>
+          <h2 class="section-title font-serif">Unutilmas Xotiralar</h2>
+          <p class="section-desc">
+            Oilamiz hayotidagi eng ta'sirli, quvonchli va qadriyatga to‘la voqealar solnomasi.
+          </p>
+        </div>
+
+        <div class="memories-container">
+          <!-- Search in memories -->
+          <div style="margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <input type="text" id="memorySearchInput" class="form-input" placeholder="🔍 Xotiralardan qidirish (so‘z yoki mavzu)..." style="box-shadow: var(--shadow-sm);">
+          </div>
+
+          <div class="memories-timeline" id="memoriesTimeline">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. Oilaviy Kalendar (Family Calendar)
+         ======================================================================= -->
+    <section class="section-padding" id="kalendar" style="background: var(--bg-secondary);">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">📅 Muhim sanalar</span>
+          <h2 class="section-title font-serif">Oilaviy Kalendar</h2>
+          <p class="section-desc">
+            Tug‘ilgan kunlar, yubileylar va rejalashtirilgan eng muhim oilaviy tadbirlar.
+          </p>
+        </div>
+
+        <div class="calendar-layout">
+          
+          <!-- Left: Calendar Grid Widget -->
+          <div class="calendar-box">
+            <div class="calendar-header">
+              <h3 class="calendar-month-title" id="calendarMonthTitle">Oktabr 2026</h3>
+              <div class="calendar-nav-btns">
+                <button class="btn-icon" id="calPrevMonth" title="Oldingi oy">◀</button>
+                <button class="btn-icon" id="calNextMonth" title="Keyingi oy">▶</button>
+              </div>
+            </div>
+
+            <div class="calendar-grid-header">
+              <span>Du</span>
+              <span>Se</span>
+              <span>Chor</span>
+              <span>Pay</span>
+              <span>Jum</span>
+              <span>Shan</span>
+              <span>Yak</span>
+            </div>
+
+            <div class="calendar-days-grid" id="calendarDaysGrid">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Right: Birthday Countdown & Upcoming Events -->
+          <div class="calendar-events-side">
+            
+            <!-- Birthday Countdown Card -->
+            <div class="countdown-card" id="birthdayCountdownCard">
+              <div class="countdown-title">⏳ Yaqinlashayotgan tavallud ayyom:</div>
+              <div class="countdown-target" id="countdownTargetName">Asqarbekning tavallud kuni</div>
+              
+              <div class="countdown-timer-grid">
+                <div class="timer-box">
+                  <div class="timer-val" id="timerDays">00</div>
+                  <div class="timer-lbl">Kun</div>
+                </div>
+                <div class="timer-box">
+                  <div class="timer-val" id="timerHours">00</div>
+                  <div class="timer-lbl">Soat</div>
+                </div>
+                <div class="timer-box">
+                  <div class="timer-val" id="timerMinutes">00</div>
+                  <div class="timer-lbl">Daqiqa</div>
+                </div>
+                <div class="timer-box">
+                  <div class="timer-val" id="timerSeconds">00</div>
+                  <div class="timer-lbl">Soniya</div>
+                </div>
+              </div>
+
+              <!-- Gift button for the upcoming birthday -->
+              <button class="btn-primary" id="countdownSendGiftBtn" style="width: 100%; margin-top: 1.25rem; justify-content: center; font-size: 0.95rem; box-shadow: var(--shadow-glow);">
+                <span>🎁</span> Tavallud kuniga sovg‘a va tilak yo‘llash
+              </button>
+            </div>
+
+            <!-- Upcoming Events Box -->
+            <div class="upcoming-box">
+              <div class="upcoming-head">
+                <h4 class="upcoming-title">📌 Barcha muhim sanalar</h4>
+                <button class="btn-primary" style="padding: 0.35rem 0.9rem; font-size: 0.8rem;" id="quickAddEventBtn">
+                  + Yangi sana
+                </button>
+              </div>
+
+              <div class="events-list" id="calendarEventsList">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Gifts & Wishes Wall -->
+        <div class="gifts-wall-container" style="margin-top: 3.5rem;">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-badge">💝 Samimiy ehtirom</span>
+            <h3 class="section-title font-serif" style="font-size: 2rem;">Sovg‘alar va Ezgu Tilaklar Qutisi</h3>
+            <p class="section-desc">
+              Tavallud ayyomlari munosabati bilan oila a'zolarimizga taqdim etilgan virtual sovg‘alar va iliq tilaklar jamlanmasi.
+            </p>
+          </div>
+
+          <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+            <button class="btn-primary" id="openGiftModalDirectBtn" style="font-size: 1rem; padding: 0.75rem 1.8rem; box-shadow: var(--shadow-glow);">
+              <span>🎁</span> Oila a'zosiga sovg‘a va tilak yo‘llash
+            </button>
+          </div>
+
+          <div class="gifts-grid" id="giftsWallGrid">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. Shaxsiy Kabinet (Admin & Family Portal)
+         ======================================================================= -->
+    <section class="section-padding" id="kabinet">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">🔐 Boshqaruv paneli</span>
+          <h2 class="section-title font-serif">Shaxsiy Kabinet</h2>
+          <p class="section-desc">
+            Oila a'zolari ma'lumotlarini yangilash, yangi fotosuratlar yuklash va xotiralarni tahrirlash markazi.
+          </p>
+        </div>
+
+        <div class="admin-card-container">
+          
+          <!-- When NOT Logged In -->
+          <div id="adminLockedState" class="admin-login-box">
+            <div class="login-lock-icon">🔒</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Kabinetga kirish</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+              Ma'lumotlarni tahrirlash uchun oilaviy maxfiy parolni kiriting.
+            </p>
+
+            <form id="adminLoginForm" style="display: flex; flex-direction: column; gap: 1rem;">
+              <input type="password" id="adminPasswordInput" class="form-input" placeholder="Parolni kiriting..." required>
+              <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+                <span>Tizimga kirish</span> ➔
+              </button>
+            </form>
+
+            <div class="login-hint">
+              <span>Demo parol: </span>
+              <span class="demo-chip" id="demoPassChip" title="Nusxalash yoki bir bosishda kirish">oilam2026</span>
+            </div>
+          </div>
+
+          <!-- When Logged In: Full Admin Portal -->
+          <div id="adminUnlockedState" style="display: none;">
+            
+            <div class="admin-header-bar">
+              <div class="admin-status">
+                <div class="status-dot"></div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.95rem;">Oila Boshqaruvchisi sifatida faol</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Barcha o‘zgarishlar darhol saqlanadi</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.8rem;">
+                <button class="btn-outline" id="resetDataBtn" style="font-size: 0.82rem; padding: 0.45rem 1rem;">
+                  🔄 Boshlang‘ich holatga qaytarish
+                </button>
+                <button class="btn-primary" id="adminLogoutBtn" style="font-size: 0.82rem; padding: 0.45rem 1rem; background: var(--accent-rose);">
+                  🚪 Chiqish
+                </button>
+              </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="admin-nav-tabs">
+              <button class="admin-tab-btn active" data-tab="tab-members">
+                <span>👨‍👩‍👦‍👦</span> Oila a'zolarini tahrirlash
+              </button>
+              <button class="admin-tab-btn" data-tab="tab-add-photo">
+                <span>📸</span> Yangi rasm qo‘shish
+              </button>
+              <button class="admin-tab-btn" data-tab="tab-memories">
+                <span>📖</span> Xotira yozish / Tahrirlash
+              </button>
+              <button class="admin-tab-btn" data-tab="tab-events">
+                <span>📅</span> Kalendarga voqea qo‘shish
+              </button>
+            </div>
+
+            <div class="admin-panel-body">
+              
+              <!-- Tab 1: Edit Family Members -->
+              <div class="admin-pane active" id="tab-members">
+                <h3 style="margin-bottom: 1.2rem; font-size: 1.3rem;">Oila a'zosi ma'lumotlarini yangilash</h3>
+                
+                <div style="margin-bottom: 1.5rem; max-width: 360px;">
+                  <label class="form-label">Tahrirlash uchun a'zoni tanlang:</label>
+                  <select id="editMemberSelect" class="form-select">
+                    <option value="father">Dadam 👨 (Umirbek Anarboyev)</option>
+                    <option value="mother">Onam 👩 (Maxbuba Anarboyeva)</option>
+                    <option value="brother">Akam 🧑 (Sanjarbek Anarboyev)</option>
+                    <option value="me">Men 🙋 (Asqarbek Aytboyev)</option>
+                  </select>
+                </div>
+
+                <form id="editMemberForm" class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label">To‘liq ismi:</label>
+                    <input type="text" id="memberFormName" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Roli / Maqomi:</label>
+                    <input type="text" id="memberFormRole" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Kasbi / Faoliyati:</label>
+                    <input type="text" id="memberFormProfession" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Tug‘ilgan kuni (YYYY-MM-DD):</label>
+                    <input type="date" id="memberFormBirthDate" class="form-input" required>
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Qiziqishlari (vergul bilan ajrating):</label>
+                    <input type="text" id="memberFormHobbies" class="form-input" placeholder="Shaxmat, Kitoblar, Sayohat...">
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Shiori yoki sevimli iqtibosi:</label>
+                    <input type="text" id="memberFormQuote" class="form-input">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Sevimli taomi:</label>
+                    <input type="text" id="memberFormFood" class="form-input">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Telefon yoki Telegram:</label>
+                    <input type="text" id="memberFormContact" class="form-input">
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Xarakteri haqida qisqacha:</label>
+                    <textarea id="memberFormCharacter" class="form-textarea"></textarea>
+                  </div>
+
+                  <div class="form-group full-width" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-primary" style="padding: 0.8rem 2rem;">
+                      💾 O‘zgarishlarni saqlash
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 2: Add New Photo to Gallery -->
+              <div class="admin-pane" id="tab-add-photo">
+                <h3 style="margin-bottom: 1.2rem; font-size: 1.3rem;">Fotoalbomga yangi surat yuklash</h3>
+                
+                <form id="addPhotoForm" class="form-grid">
+                  <div class="form-group full-width">
+                    <label class="form-label">Fotosuratni tanlang (Kompyuterdan yuklash yoki havola):</label>
+                    <div class="file-dropzone" id="photoDropzone">
+                      <div class="dropzone-icon">📁</div>
+                      <div style="font-weight: 700; margin-bottom: 0.3rem;">Kompyuterdan rasm tanlash uchun bu yerni bosing</div>
+                      <div style="font-size: 0.85rem; color: var(--text-muted);">PNG, JPG, WEBP formatlar qo‘llab-quvvatlanadi</div>
+                      <input type="file" id="photoFileInput" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="image-preview-box" id="photoPreviewBox">
+                      <img src="" id="photoPreviewImg" alt="Tanlangan rasm">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Yoki rasm havolasi (URL):</label>
+                    <input type="url" id="photoUrlInput" class="form-input" placeholder="https://misol.uz/rasm.jpg">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Kategoriya:</label>
+                    <select id="photoCategorySelect" class="form-select" required>
+                      <option value="family">👨‍👩‍👦‍👦 Oilaviy rasmlar</option>
+                      <option value="celebration">🎂 Bayram va tug‘ilgan kunlar</option>
+                      <option value="travel">✈️ Sayohatlar</option>
+                      <option value="daily">🏡 Kundalik lahzalar</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Rasm sarlavhasi:</label>
+                    <input type="text" id="photoTitleInput" class="form-input" placeholder="Masalan: Yozgi sayr lahzalari" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Olingan joy:</label>
+                    <input type="text" id="photoLocationInput" class="form-input" placeholder="Masalan: Samarqand yoki Toshkent" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Sana:</label>
+                    <input type="date" id="photoDateInput" class="form-input" required>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label class="form-label">Surat tavsifi:</label>
+                    <textarea id="photoDescInput" class="form-textarea" placeholder="Bu kun qanday o‘tganligi haqida qisqacha izoh..."></textarea>
+                  </div>
+
+                  <div class="form-group full-width" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-primary" style="padding: 0.8rem 2rem;">
+                      ✨ Fotoalbomga qo‘shish
+                    </button>
+                  </div>
+                </form>
+
+                <h4 style="margin-top: 3rem; margin-bottom: 1rem; font-size: 1.15rem;">Fotoalbomdagi mavjud rasmlarni boshqarish:</h4>
+                <div class="admin-items-grid" id="adminGalleryManageList">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Tab 3: Memories Management -->
+              <div class="admin-pane" id="tab-memories">
+                <h3 style="margin-bottom: 1.2rem; font-size: 1.3rem;">Yangi xotira qo‘shish</h3>
+                
+                <form id="addMemoryForm" class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label">Xotira sarlavhasi:</label>
+                    <input type="text" id="memoryTitleInput" class="form-input" placeholder="Masalan: Registon maydonidagi unutilmas kun" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Hikoya muallifi:</label>
+                    <select id="memoryAuthorSelect" class="form-select" required>
+                      <option value="Umirbek (Dadam)">Umirbek (Dadam) 👨</option>
+                      <option value="Maxbuba (Onam)">Maxbuba (Onam) 👩</option>
+                      <option value="Sanjarbek (Akam)">Sanjarbek (Akam) 🧑</option>
+                      <option value="Asqarbek (Men)">Asqarbek (Men) 🙋</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Voqea sanasi:</label>
+                    <input type="date" id="memoryDateInput" class="form-input" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Mavzu / Teg:</label>
+                    <input type="text" id="memoryTagInput" class="form-input" placeholder="Sayohat, Bayram, Bolalik..." required>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label class="form-label">Xotiraga oid surat havolasi yoki tanlangan rasm:</label>
+                    <input type="text" id="memoryImageInput" class="form-input" placeholder="assets/images/gallery_travel.jpg yoki rasm URL" value="assets/images/hero_family_cover.jpg">
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label class="form-label">To‘liq hikoya / Voqea bayoni:</label>
+                    <textarea id="memoryTextInput" class="form-textarea" style="min-height: 140px;" placeholder="Ushbu esda qolarli kunda nimalar bo‘lganini batafsil yozing..." required></textarea>
+                  </div>
+
+                  <div class="form-group full-width" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-primary" style="padding: 0.8rem 2rem;">
+                      📖 Xotirani saqlash
+                    </button>
+                  </div>
+                </form>
+
+                <h4 style="margin-top: 3rem; margin-bottom: 1rem; font-size: 1.15rem;">Mavjud xotiralar ro‘yxati:</h4>
+                <div class="admin-items-grid" id="adminMemoriesManageList">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Tab 4: Calendar Events Management -->
+              <div class="admin-pane" id="tab-events">
+                <h3 style="margin-bottom: 1.2rem; font-size: 1.3rem;">Kalendarga yangi sana kiritish</h3>
+                
+                <form id="addEventForm" class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label">Voqea sarlavhasi:</label>
+                    <input type="text" id="eventTitleInput" class="form-input" placeholder="Masalan: Maxbuba onamning tavallud kuni 💐" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Kategoriya:</label>
+                    <select id="eventCategorySelect" class="form-select" required>
+                      <option value="birthday">🎂 Tug‘ilgan kun</option>
+                      <option value="anniversary">💍 Yubiley</option>
+                      <option value="celebration">🎉 Bayram</option>
+                      <option value="travel">✈️ Sayohat</option>
+                      <option value="dinner">🍲 Kechki ovqat</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Sana:</label>
+                    <input type="date" id="eventDateInput" class="form-input" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Kimga tegishli:</label>
+                    <input type="text" id="eventMemberInput" class="form-input" placeholder="Barchamiz / Dadam / Onam / Sanjarbek / Asqarbek">
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label class="form-label">Qisqacha eslatma / Ta'rif:</label>
+                    <textarea id="eventDescInput" class="form-textarea" placeholder="Tadbir haqida eslatmalar..."></textarea>
+                  </div>
+
+                  <div class="form-group full-width" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-primary" style="padding: 0.8rem 2rem;">
+                      📅 Kalendarga kiritish
+                    </button>
+                  </div>
+                </form>
+
+                <h4 style="margin-top: 3rem; margin-bottom: 1rem; font-size: 1.15rem;">Kalendardagi barcha voqealar:</h4>
+                <div class="admin-items-grid" id="adminEventsManageList">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Modals
+       ========================================================================= -->
+
+  <!-- Lightbox Modal (Rasmni bosganda katta ko'rish) -->
+  <div class="modal-overlay" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="modal-close-btn" id="lightboxCloseBtn">✕</button>
+      
+      <div class="lightbox-content">
+        <div class="lightbox-image-stage">
+          <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" title="Oldingi rasm">‹</button>
+          <img src="" id="lightboxImg" alt="Kattalashtirilgan rasm">
+          <button class="lightbox-nav-btn next" id="lightboxNextBtn" title="Keyingi rasm">›</button>
+        </div>
+
+        <div class="lightbox-caption-bar">
+          <div class="lightbox-caption-info">
+            <h3 id="lightboxTitle">Rasm sarlavhasi</h3>
+            <p id="lightboxDesc">Rasm tavsifi</p>
+          </div>
+          <div style="display: flex; gap: 0.8rem; align-items: center;">
+            <button class="btn-outline" id="lightboxLikeBtn">
+              <span>❤️</span> <span id="lightboxLikeCount">0</span>
+            </button>
+            <a href="#" download id="lightboxDownloadBtn" class="btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1.1rem;">
+              <span>⬇️</span> Yuklab olish
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member Detail Modal (Oila a'zosi haqida batafsil ma'lumot) -->
+  <div class="modal-overlay" id="memberDetailModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="memberModalCloseBtn">✕</button>
+      
+      <div class="member-modal-content" id="memberModalBody">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Memory Reader Modal (Xotirani to'liq o'qish) -->
+  <div class="modal-overlay" id="memoryReaderModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="memoryReaderCloseBtn">✕</button>
+      
+      <div class="member-modal-content" id="memoryReaderBody">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Birthday Gift & Wishes Modal (Tavallud ayyomiga sovg'a jo'natish) -->
+  <div class="modal-overlay" id="giftModal">
+    <div class="modal-container" style="max-width: 650px;">
+      <button class="modal-close-btn" id="giftModalCloseBtn">✕</button>
+      
+      <div class="member-modal-content" style="padding: 2.2rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--primary-light); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); flex-shrink: 0;">
+            🎁
+          </div>
+          <div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.2rem;">Tavallud ayyomiga sovg‘a yo‘llash</h2>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0;">
+              Oila a'zomizni tavallud kuni bilan qutlab, virtual sovg‘a va samimiy tilak yuboring!
+            </p>
+          </div>
+        </div>
+
+        <form id="giftSendForm">
+          <!-- Recipient Selection Pills -->
+          <div style="margin-bottom: 1.2rem;">
+            <label class="form-label" style="display: block; margin-bottom: 0.5rem;">Kimning tavallud ayyomiga?</label>
+            <div class="recipient-pills" id="giftRecipientPills">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Recipient Preview Card -->
+          <div class="recipient-preview-card" id="recipientPreviewCard" style="display: flex; align-items: center; gap: 1rem; background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.4rem; border: 1px solid var(--border-color);">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Choose a Gift -->
+          <div style="margin-bottom: 1.4rem;">
+            <label class="form-label" style="display: block; margin-bottom: 0.5rem;">Sovg‘a turini tanlang:</label>
+            <div class="gift-options-grid" id="giftOptionsGrid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Preset wishes -->
+          <div style="margin-bottom: 1.2rem;">
+            <label class="form-label" style="display: block; margin-bottom: 0.4rem;">Tayyor samimiy tilaklar (bir bosishda qo‘yish):</label>
+            <div class="preset-wishes-chips" id="presetWishesChips">
+              <!-- Preset chips -->
+            </div>
+          </div>
+
+          <!-- Custom message -->
+          <div class="form-group" style="margin-bottom: 1.2rem;">
+            <label class="form-label" for="giftCustomMessage">Tabrik va ezgu tilaklaringiz:</label>
+            <textarea id="giftCustomMessage" class="form-textarea" placeholder="Tavallud ayyomingiz bilan chin qalbimdan tabriklayman..." required style="min-height: 90px;"></textarea>
+          </div>
+
+          <!-- Sender name -->
+          <div class="form-group" style="margin-bottom: 1.6rem;">
+            <label class="form-label" for="giftSenderName">Kimdan (Ismingiz):</label>
+            <input type="text" id="giftSenderName" class="form-input" placeholder="Masalan: Sanjarbek yoki Asqarbek" required>
+          </div>
+
+          <!-- Action buttons -->
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <button type="submit" class="btn-primary" style="flex: 1; min-width: 200px; justify-content: center; padding: 0.75rem 1.2rem; box-shadow: var(--shadow-glow);">
+              <span>💌</span> Saytda taqdim etish
+            </button>
+            <button type="button" class="btn-outline" id="giftSendTelegramBtn" style="flex: 1; min-width: 170px; justify-content: center; padding: 0.75rem 1.2rem;" title="Telegram orqali to‘g‘ridan-to‘g‘ri yuborish">
+              <span>✈️</span> Telegramda yo‘llash
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Floating Ambient Audio Player
+       ========================================================================= -->
+  <div class="audio-player-pill" id="ambientAudioBtn" title="Sokin fon musiqasini yoqish/o‘chirish">
+    <div class="audio-wave">
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+    </div>
+    <span class="audio-label" id="audioLabel">Fon musiqasi</span>
+    <span style="font-size: 0.9rem;">🎵</span>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="site-logo">
+            <span class="logo-icon">🏡</span>
+            <span>MyFamily</span>
+          </div>
+          <p>
+            Umirbek ota, Maxbuba ona, Sanjarbek va Asqarbekning ahil qozoq oilaviy qadriyatlari, fotoalbomi va unutilmas xotiralari maskani.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Bo‘limlar</h4>
+          <ul class="footer-list">
+            <li><a href="#bosh-sahifa">Bosh sahifa</a></li>
+            <li><a href="#oilamiz">Oila a'zolarimiz</a></li>
+            <li><a href="#fotoalbom">Fotoalbom</a></li>
+            <li><a href="#xotiralar">Esdalik xotiralar</a></li>
+            <li><a href="#kalendar">Oilaviy kalendar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Oila Shiori</h4>
+          <p style="font-style: italic; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+            "Otan — otbasınan bastaladı. Dunyoda eng mustahkam qo‘rg‘on — bu o‘zaro mehr-oqibat va ishonch bilan qurilgan ahil oiladir."
+          </p>
+          <a href="#kabinet" class="btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;">
+            🔐 Kabinetga o‘tish
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 MyFamily — Anarboyevlar qozoq xonadoni. Barcha huquqlar himoyalangan.</div>
+        <div style="font-size: 0.85rem;">Mehr bilan yaratildi ❤️ Asqarbek Aytboyev</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
